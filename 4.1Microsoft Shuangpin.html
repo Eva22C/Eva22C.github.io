@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Type "中文输入法" with Microsoft Shuangpin</title>
+  <style>    
+    #footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+        background-color: #f5f5f5;
+        color: #333;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+      }
+  </style>
+</head>
+<body>
+  <img src="Microsoft_Shuangpin.png" alt="Microsoft Shuangpin" width="850px"style="display: block; margin: auto;">
+  <p>Type "中文输入法(Pinyin: zhong wen shu ru fa)" with Microsoft Shuangpin</p>
+  <div id="footer">
+      CS1102-Course Projext-Group8(AN Ziyue+CAO Ziyan+LIN Zerong+YANG Keyan) &copy; 2022/2023 SemesterB
+  </div>
+  <script type="text/javascript">
+    function showChinese() {
+      var input = document.getElementById("input").value.toLowerCase(); 
+      var output = "";
+      for (var i = 0; i < input.length; i += 2) {
+        var sub = input.substr(i, 2);
+        switch (sub) {
+          case "vs":
+            output += "中";
+            break;
+          case "wf":
+            output += "文";
+            break;
+          case "uu":
+            output += "输";
+            break;
+          case "ru":
+            output += "入";
+            break;
+          case "fa":
+            output += "法";
+            break;
+          default:
+            output += sub;  
+            break;
+        }
+      }
+      if (output === "") {
+        output = "Unknown input";
+      }
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+  <div>
+    <label for="input">Please type：</label>
+    <input type="text" id="input" placeholder="Example: vs">
+    <button onclick="showChinese()">Convert</button>
+  </div>
+  <div id="output"></div>
+</body>
+</html>

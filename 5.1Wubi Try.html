@@ -1,0 +1,60 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Type "中文输入法" with Wubi</title>
+  <style>
+    #footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      background-color: #f5f5f5;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://www.ifanr.com/764609">
+      <img src="Wubi2.jpg" width="800px" alt="Wubi2" style="display: block; margin: auto;">
+  </a>
+  <p>Type "中文(Pinyin: zhong wen)" with Wubi</p>
+  <div id="footer">
+      CS1102-Course Projext-Group8(AN Ziyue+CAO Ziyan+LIN Zerong+YANG Keyan) &copy; 2022/2023 SemesterB
+  </div>
+  <script type="text/javascript">
+    function showChinese() { //define a function
+      var input = document.getElementById("input").value.toLowerCase(); 
+      var output = ""
+      for (var i = 0; i < input.length; i += 2) {
+        var sub = input.substr(i, 2);
+        switch (sub) {
+          case "k":
+            output += "中";
+            break;
+          case "y":
+            output += "文";
+            break;
+          case "ky":
+            output += "中文";
+            break;
+          default:
+            output += sub;  
+            break;
+        }
+      }
+      if (output === "") {
+        output = "Unknown input";
+      }
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+  <div>
+    <label for="input">Please type：</label>
+    <input type="text" id="input" placeholder="Example: k">
+    <button onclick="showChinese()">Convert</button>
+  </div>
+  <div id="output"></div>
+</body>
+</html>

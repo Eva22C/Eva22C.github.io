@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Experience with Different Input Methods</title>
+  <style>
+    #inputMethodSelected {color: red}
+    table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+  }
+  th {
+    font-weight: bold;
+  }
+    #footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      background-color: #f5f5f5;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <img src="cityu.png" alt="image" style="float: right; width: 15%; height: auto;">
+  <h1>Our Experience with Different Input Methods</h1>
+  <p>By CS1102-Group8</p>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>SID</th>
+  </tr>
+  <tr>
+    <td>AN Ziyue</td>
+    <td>56644771</td>
+  </tr>
+  <tr>
+    <td>CAO Ziyan</td>
+    <td>56644906</td>
+  </tr>
+  <tr>
+    <td>LIN Zerong</td>
+    <td>56633990</td>
+  </tr>
+  <tr>
+    <td>YANG Keyan</td>
+    <td>57127046</td>
+  </tr>
+  </table>
+  <p>When it comes to typing in Chinese or English, there are many different input methods to choose from. We've divided them into three main categories (You can click on the name of each input method to see the details):</p>
+
+  <h2>Input Methods</h2>
+  <ol>
+    <li>Chinese Input Method
+      <ol type="a">
+        <li>Functional Classification
+          <ul>
+            <li>Pinyin-based Input Method
+              <ul id="myList1">
+                <li><a href="#" onclick="window.open('3.Full Pinyin.html', '_blank')">Full Pinyin(全拼) Input Method</a></li>
+                <li><a href="#" onclick="window.open('4.0Shuangpin.html', '_blank')">Shuangpin(双拼) Input Method</a></li>
+                <li><a href="#" onclick="window.open('8.Phonetic.html', '_blank')">Phonetic(注音) Input Method</a></li>
+              </ul>
+            </li>
+            <li>Character-based Input Method
+              <ul id="myList2">
+                <li><a href="#" onclick="window.open('5.0Wubi.html', '_blank')">Wubi(五笔) Input Method</a></li>
+                <li><a href="#" onclick="window.open('6.Cangjie Input Method.html', '_blank')">Cangjie(仓颉) Input Method</a></li>
+                <li><a href="#" onclick="window.open('7.Quick Input Method.html', '_blank')">Quick(速成) Input Method</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Common Input Method of Simplified and Traditional Chinese Characters
+          <ul>
+            <li>Simplified Chinese Common Input Method
+              <ul id="myList3">
+                <li><a href="#" onclick="window.open('3.Full Pinyin.html', '_blank')">Full Pinyin(全拼) Input Method</a></li>
+                <li><a href="#" onclick="window.open('4.0Shuangpin.html', '_blank')">Shuangpin(双拼) Input Method</a></li>
+                <li><a href="#" onclick="window.open('5.0Wubi.html', '_blank')">Wubi(五笔) Input Method</a></li>
+              </ul>
+            </li>
+            <li>Traditional Chinese Common Input Method
+              <ul id="myList4">
+                <li><a href="#" onclick="window.open('6.Cangjie Input Method.html', '_blank')">Cangjie(仓颉) Input Method</a></li>
+                <li><a href="#" onclick="window.open('7.Quick Input Method.html', '_blank')">Quick(速成) Input Method</a></li>
+                <li><a href="#" onclick="window.open('8.Phonetic.html', '_blank')">Phonetic(注音) Input Method</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+  <br/>
+    <li>English Input Method</li>
+      <ul id="myList5">
+        <li><a href="#" onclick="window.open('9.English.html', '_blank')">4 main Keyboard layouts for Latin alphabet</a></li>
+      </ul>
+    <br/>
+    <li>Voice Input Method</li>
+      <ul id="myList6">
+        <li><a href="#" onclick="window.open('10.Voice.html', '_blank')">Voice Input Method</a></li>
+  </ol> 
+  
+  <h3>Based on our one-month research and experience, we come to the following conclusions:</h3>
+  <ul>
+    <li><a href="#" onclick="window.open('12.Findings.html', '_blank')">Our Findings</a></li>
+  </ul>
+
+  <p>What about you? Have you tried any of these input methods? Which one do you prefer? </p>      
+  <h3>Choose Your Preferred Input Method:</h3>
+  <form>
+    <p>
+      <input type="radio" name="inputMethod" value="Full Pinyin Input Method">Full Pinyin(全拼) Input Method <br>
+      <input type="radio" name="inputMethod" value="Shuangpin Input Method">Shuangpin(双拼) Input Method<br>
+      <input type="radio" name="inputMethod" value="Wubi Input Method">Wubi(五笔) Input Method<br>
+      <input type="radio" name="inputMethod" value="Cangjie Input Method">Cangjie(仓颉) Input Method<br>
+      <input type="radio" name="inputMethod" value="Quick Input Method">Quick(速成) Input Method<br>
+      <input type="radio" name="inputMethod" value="Phonetic Input Method">Phonetic(注音) Input Method<br>
+      <input type="radio" name="inputMethod" value="QWERTY">QWERTY<br>
+      <input type="radio" name="inputMethod" value="Dvorak">Dvorak<br>
+      <input type="radio" name="inputMethod" value="Colemak">Colemak<br>
+      <input type="radio" name="inputMethod" value="Workman">Workman<br>
+      <input type="radio" name="inputMethod" value="Video input">Voice Input Method<br>
+    </p>
+    <input type="button" value="Submit" onclick="showInputMethod()">
+  </form>
+
+  <p id="inputMethodSelected"></p>
+
+  <h3><a href="#" onclick="window.open('11.References.html', '_blank')">References</a></h3>
+  
+  <div id="footer">
+    CS1102-Course Projext-Group8(AN Ziyue+CAO Ziyan+LIN Zerong+YANG Keyan) &copy; 2022/2023 SemesterB
+  </div>
+  
+  <script>
+    function showInputMethod() {
+      var inputMethod = document.querySelector('input[name="inputMethod"]:checked').value;
+      document.getElementById('inputMethodSelected').innerHTML = "You have selected " + inputMethod + " as your preferred input method. And thank you for your reading.";
+    }
+    var myList1 = document.getElementById("myList1");
+    myList1.style.listStyleType = "circle";
+    var myList2 = document.getElementById("myList2");
+    myList2.style.listStyleType = "disc";
+    var myList3 = document.getElementById("myList3");
+    myList3.style.listStyleType = "circle";
+    var myList4 = document.getElementById("myList4");
+    myList4.style.listStyleType = "disc";
+    var myList5 = document.getElementById("myList5");
+    myList5.style.listStyleType = "square";
+    var myList6 = document.getElementById("myList6");
+    myList6.style.listStyleType = "square";
+  </script>
+
+</body>
+</html>
